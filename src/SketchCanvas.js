@@ -141,7 +141,7 @@ class SketchCanvas extends React.Component {
   }
 
   getPaths() {
-    return this._paths
+    return this._paths.concat({ path: this._path, size: this._size, drawer: this.props.user })
   }
 
   getBase64(imageType, transparent, includeImage, includeText, cropToImageSize, callback) {
